@@ -54,6 +54,10 @@ strong {
     font-weight: var(--fw-bold);
 }
 
+iframe{
+    width: 100%;
+}
+
 :focus {
     outline: 3px solid var(--clr-accent);
     outline-offset: 3px;
@@ -383,7 +387,7 @@ opacity: 0;}
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: .3em .3em;
-    height: 50vw;
+    height: 100vw;
 }
 
 .portfolio__item p{
@@ -449,6 +453,15 @@ opacity: 0;}
 .portfolio__item {
     background-size: cover;
     height: 50%;
+    font-weight: var(--fw-bold);
+}
+
+.portfolio .education {
+    height: 100vw;
+}
+
+.portfolio .education dl dd {
+    color: var(--clr-dark);
 }
 
 #education_item01 {
