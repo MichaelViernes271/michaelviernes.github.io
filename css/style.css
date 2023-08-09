@@ -109,6 +109,13 @@ h3 {
 
 }
 
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid var(--clr-accent);
+  margin: 15px;
+  border-radius: 5px;
+}
+
 .section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
@@ -372,24 +379,80 @@ opacity: 0;}
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: .3em .3em;
+    height: 50vw;
 }
 
-.portfolio__item {
-    background: var(--clr-accent);
+.portfolio__item p{
+    background: var(--clr-light);
+    display: inline-block;
+    width: 75%;
+    text-decoration: none;
+    color: var(--clr-dark);
+    word-wrap: normal;
+    background: #F4D160d9;
+
 }
 
-.portfolio__img {
-    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+.portfolio__item p:active {
+    text-decoration: none;
 }
+.portfolio__item p:visited{
+    text-decoration: none;
+}
+
 
 .portfolio__item:focus {
     position: relative;
     z-index: 2;
 }
 
-.portfolio__img:hover, .portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
-    opacity: .75;
+.portfolio__item {
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+}
+
+.portfolio__item:hover, .portfolio__item:focus .portfolio__item {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+/*selecting each portfolio as an image*/
+
+#portfolio__item01 {
+    background-image: url("https://www.ctrl.blog/media/hero/glibc-unity-gaming-man.1088x612.webp");
+    background-position: bottom;
+}
+
+#portfolio__item02 {
+    background-image: url("../img/python.jpg");
+}
+
+#portfolio__item03 {
+    background-image: url("../img/algorithms.jpg");
+}
+
+#portfolio__item04 {
+    background-image: url("../img/web_developemnt.jpg");
+}
+
+#portfolio__item05 {
+    background-image: url("../img/design.jpg");
+}
+
+#portfolio__item06 {
+    background-image: url("../img/transcript.jpg");
+}
+
+.portfolio__item {
+    background-size: cover;
+    height: 50%;
+}
+
+#education_item01 {
+    background-image: url("../img/documents.jpg");
+}
+
+#education_item02 {
+    background-image: url("../img/school.jpg");
 }
 
 /*footer*/
@@ -443,7 +506,7 @@ opacity: 0;}
 }
 
 .portfolio-item-individual p {
-    max-width: 600px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
