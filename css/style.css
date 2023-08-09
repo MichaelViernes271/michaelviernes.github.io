@@ -343,6 +343,10 @@ opacity: 0;}
     box-shadow: var(--bs);
 }
 
+.about-me__body {
+    font-weight: var(--fw-reg);
+}
+
 @media (min-width:600px) {
     .about-me {
         display: grid;

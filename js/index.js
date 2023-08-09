@@ -1,5 +1,8 @@
+// $('div').lazyload(options);
+
+// const darkMode = document.querySelector('.switch');
+
 const navToggle = document.querySelector('.nav-toggle');
-const darkMode = document.querySelector('.switch');
 const navLinks = document.querySelectorAll('.nav__link');
 
 // create a button for dark mode
