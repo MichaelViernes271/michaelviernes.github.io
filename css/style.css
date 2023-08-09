@@ -164,6 +164,12 @@ nav {
     }
 }
 
+.section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1em;
+}
+
 /*my services section*/
 
 .my-services {
@@ -190,6 +196,7 @@ nav {
     opacity: .25;
 }
 
+
 .services {
     margin-bottom: 4em;
 }
@@ -211,4 +218,75 @@ nav {
     .service + .service {
         margin-left: 2em;
     }
+}
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+        "title img"
+        "subtitle img"
+        "text img";
+        grid-column-gap: 2em;
+    }
+
+    .section__title--about, {
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: .3em .3em;
+
+}
+
+.portfolio__item {
+    background: var(--clr-accent);
+}
+
+.portfolio__img {
+    transition: transform 750ms cubic-bezier(.5,0,.5,1),
+        opacity 250ms linear;
+}
+
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: .75;
+
 }
